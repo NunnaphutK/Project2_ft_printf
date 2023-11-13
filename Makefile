@@ -6,7 +6,7 @@
 #    By: nkiticha <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/03 13:28:44 by nkiticha          #+#    #+#              #
-#    Updated: 2023/11/06 15:29:51 by nkiticha         ###   ########.fr        #
+#    Updated: 2023/11/13 13:46:16 by nkiticha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,16 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_printf_char.c
+SRC = ft_printf.c \
+      ft_printf_c.c \
+      ft_printf_s.c \
+      ft_printf_p.c \
+      ft_printf_di.c \
+      ft_printf_u.c \
+      ft_printf_x.c \
+      ft_printf_X.c \
+      ft_printf_percent.c
+
 OBJ = ${SRC:.c=.o}
 
 all:	$(NAME)
