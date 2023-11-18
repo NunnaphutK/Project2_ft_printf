@@ -13,29 +13,36 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <sys/wait.h>
 #include <limits.h>
 #include "ft_printf.h"
 
 int	main(void)
-{	
-	ft_printf("x = %x\n", 0);
-	ft_printf("x = %x\n", INT_MAX);
-	ft_printf("x = %x\n", INT_MIN);
-	ft_printf("x = %x\n", -101);
-	ft_printf("x = %x\n", 101);
-	ft_printf("X = %X\n", 0);
-	ft_printf("X = %X\n", INT_MAX);
-	ft_printf("X = %X\n", INT_MIN);
-	ft_printf("X = %X\n", -101);
-	ft_printf("X = %X\n", 101);
-	printf("--------------------------------------------\n");
-	printf("x = %x\n", 0);
-	printf("x = %x\n", INT_MAX);
-	printf("x = %x\n", INT_MIN);
-	printf("x = %x\n", -101);
-	printf("x = %x\n", 101);
+{
+	// ft_printf("d test = %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	// ft_printf("i test = %i %i %i %i %i %i %i\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	ft_printf("Hello %s %s %c %c\n", "eee","aaa",'a', 'b');
+	// printf("d test = %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	// printf("i test = %i %i %i %i %i %i %i\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+    printf("Hello %s %s %c %c\n", "eee","aaa",'a', 'b');
+    return 0;
 }
+// {	
+// 	ft_printf("x = %x\n", 0);
+// 	ft_printf("x = %x\n", INT_MAX);
+// 	ft_printf("x = %x\n", INT_MIN);
+// 	ft_printf("x = %x\n", -101);
+// 	ft_printf("x = %x\n", 101);
+// 	ft_printf("X = %X\n", 0);
+// 	ft_printf("X = %X\n", INT_MAX);
+// 	ft_printf("X = %X\n", INT_MIN);
+// 	ft_printf("X = %X\n", -101);
+// 	ft_printf("X = %X\n", 101);
+// 	printf("--------------------------------------------\n");
+// 	printf("x = %x\n", 0);
+// 	printf("x = %x\n", INT_MAX);
+// 	printf("x = %x\n", INT_MIN);
+// 	printf("x = %x\n", -101);
+// 	printf("x = %x\n", 101); }
 /*
 {	
 	ft_printf("i=%i, d=%d\n",INT_MAX,INT_MAX);
