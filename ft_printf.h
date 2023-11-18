@@ -19,7 +19,7 @@
 
 int	ft_printf_c(char c);
 int	ft_printf_s(char *str);
-//int	ft_printf_p(unsigned long n);
+int	ft_printf_p(unsigned long n);
 int	ft_printf_di(int n);
 //int	ft_printf_u(unsigned int n);
 int	ft_printf_x(unsigned int n);

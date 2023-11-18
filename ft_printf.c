@@ -12,17 +12,15 @@
 
 #include "ft_printf.h"
 
-static int	ft_checktype(va_list arg, const char c)
+static int	ft_checktype(int arg, const char c)
 {
 	int	i;
 
 	i = 0;
 	if (c == 'c')
 		i += ft_printf_c((int)arg);
-	else if (c == 's')
-		i += ft_printf_s((char *)arg);
-	//else if (c == 'p')
-	//	i += ft_printf_p((unsigned long)arg);
+	else if (c == 'p')
+		i += ft_printf_p((unsigned long)arg);
 	else if (c == 'd' || c == 'i')
 			i += ft_printf_di((int)arg);
 	//else if (c == 'u')
@@ -49,7 +47,10 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			cnt += ft_checktype(va_arg(arg, void *), str[i + 1]);
+			if (str[i + 1] == 's')
+				cnt += ft_printf_s(va_arg(arg, char *));
+			else
+				cnt += ft_checktype(va_arg(arg, int), str[i + 1]);
 			i++;
 		}
 		else
@@ -60,4 +61,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(arg);
 	return (cnt);
-}
+	}
