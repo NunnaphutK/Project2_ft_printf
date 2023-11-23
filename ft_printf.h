@@ -6,7 +6,7 @@
 /*   By: nkiticha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 17:43:23 by nkiticha          #+#    #+#             */
-/*   Updated: 2023/11/18 13:53:52 by nkiticha         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:27:27 by nkiticha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 int	ft_printf_c(char c);
 int	ft_printf_s(char *str);
-int	ft_printf_p(unsigned long n);
+int	ft_printf_p(unsigned long long n);
 int	ft_printf_di(int n);
-//int	ft_printf_u(unsigned int n);
+int	ft_printf_u(unsigned int n);
 int	ft_printf_x(unsigned int n);
 int	ft_printf_bx(unsigned int n);
 int	ft_printf(const char *str, ...);

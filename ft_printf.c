@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkiticha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 15:51:23 by nkiticha          #+#    #+#             */
-/*   Updated: 2023/11/18 13:54:46 by nkiticha         ###   ########.fr       */
+/*   Created: 2023/11/23 15:36:39 by nkiticha          #+#    #+#             */
+/*   Updated: 2023/11/23 16:26:50 by nkiticha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,15 @@ static int	ft_checktype(int arg, const char c)
 	if (c == 'c')
 		i += ft_printf_c((int)arg);
 	else if (c == 'p')
-		i += ft_printf_p((unsigned long)arg);
+		i += ft_printf_p((unsigned long long)arg);
 	else if (c == 'd' || c == 'i')
-			i += ft_printf_di((int)arg);
-	//else if (c == 'u')
-	//	i += ft_printf_u(va_arg((unsigned int)arg);
+		i += ft_printf_di((int)arg);
+	else if (c == 'u')
+		i += ft_printf_u((unsigned int)arg);
 	else if (c == 'x')
 		i += ft_printf_x((unsigned int)arg);
 	else if (c == 'X')
 		i += ft_printf_bx((unsigned int)arg);
-	else if (c == '%')
-		i += ft_printf_c(c);
 	return (i);
 }
 
@@ -49,16 +47,16 @@ int	ft_printf(const char *str, ...)
 		{
 			if (str[i + 1] == 's')
 				cnt += ft_printf_s(va_arg(arg, char *));
+			else if (str[i + 1] == '%')
+				cnt += ft_printf_c('%');
 			else
 				cnt += ft_checktype(va_arg(arg, int), str[i + 1]);
 			i++;
 		}
 		else
-		{
 			cnt += ft_printf_c(str[i]);
-		}
 		i++;
 	}
 	va_end(arg);
 	return (cnt);
-	}
+}

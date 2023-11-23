@@ -6,7 +6,7 @@
 /*   By: nkiticha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:21:34 by nkiticha          #+#    #+#             */
-/*   Updated: 2023/11/18 13:41:32 by nkiticha         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:36:56 by nkiticha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,35 @@
 int	main(void)
 {
 	// ft_printf("d test = %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	// ft_printf("i test = %i %i %i %i %i %i %i\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	ft_printf("Hello %s %s %c %c\n", "eee","aaa",'a', 'b');
-	ft_printf("x test = %x %x %x %x %x %x %x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	// printf("d test = %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	// ft_printf("i test = %i %i %i %i %i %i %i\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	// printf("i test = %i %i %i %i %i %i %i\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-    printf("Hello %s %s %c %c\n", "eee","aaa",'a', 'b');
+
+	ft_printf("x test = %x %x %x %x %x %x %x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	printf("x test = %x %x %x %x %x %x %x\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	ft_printf("p test = %p %p %p %p %p %p %p\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	printf("p test = %p %p %p %p %p %p %p\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	printf("p test =%p %p %p %p %p %p %p %p\n",0, INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	printf("p test = %p %p %p %p %p %p %p %p %p %p %p %p\n",0,0,0,0,0,0,0,0,0,0,0,NULL,-42);
+	
+	/*printf("%u\n",INT_MAX);
+	printf("%u\n",INT_MIN);
+	printf("%u\n",LONG_MAX);
+	printf("%u\n",LONG_MIN);
+	printf("%u\n",UINT_MAX);
+	printf("%u\n",ULONG_MAX);
+	printf("%u\n",9223372036854775807LL);
+	printf("u test = %u %u %u %u %u %u %u\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	printf("------------------------------\n");
+	ft_printf("%u\n",INT_MAX);
+	ft_printf("%u\n",INT_MIN);
+	ft_printf("%u\n",LONG_MAX);
+	ft_printf("%u\n",LONG_MIN);
+	ft_printf("%u\n",UINT_MAX);
+	ft_printf("%u\n",ULONG_MAX);
+	ft_printf("%u\n",9223372036854775807LL);
+	ft_printf("u test = %u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);*/
+	ft_printf("%%%c\n",'x');
+	printf("%%%c\n",'x');
     return 0;
 }
 // {	
@@ -68,14 +88,6 @@ int	main(void)
 	printf("i=%i, d=%d\n",ULONG_MAX,ULONG_MAX);
 	printf("d test = %d %d %d %d %d %d %d\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 	printf("i test = %i %i %i %i %i %i %i\n", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
-	printf("%u\n",INT_MAX);
-	printf("%u\n",INT_MIN);
-	printf("%u\n",LONG_MAX);
-	printf("%u\n",LONG_MIN);
-	printf("%u\n",UINT_MAX);
-	printf("%u\n",ULONG_MAX);
-	printf("%u\n",9223372036854775807LL);
-	printf("u test = %u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
 }	*/
 	/*
 {
