@@ -6,7 +6,7 @@
 /*   By: nkiticha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:46:31 by nkiticha          #+#    #+#             */
-/*   Updated: 2023/11/23 15:33:55 by nkiticha         ###   ########.fr       */
+/*   Updated: 2023/11/26 17:53:16 by nkiticha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int	ft_printf_s(char *str)
 	i = 0;
 	if (!str)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		return (write(1, "(null)", 6));
 	}
 	while (str[i] != '\0')
 	{
-		write(1, &str[i], 1);
+		if (write(1, &str[i], 1) == -1)
+			return (-1);
 		i++;
 	}
 	return (i);

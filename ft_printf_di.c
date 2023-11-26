@@ -6,13 +6,13 @@
 /*   By: nkiticha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:11:21 by nkiticha          #+#    #+#             */
-/*   Updated: 2023/11/23 15:33:02 by nkiticha         ###   ########.fr       */
+/*   Updated: 2023/11/26 17:59:53 by nkiticha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_p_di(int n)
+static int	ft_p_di(int n)
 {
 	char	x;
 
@@ -24,14 +24,17 @@ static void	ft_p_di(int n)
 	if (n < 0)
 		n = -n;
 	x = n + '0';
-	write(1, &x, 1);
+	if (write(1, &x, 1) == -1)
+		return (-1);
+	return (0);
 }
 
 int	ft_printf_di(int n)
 {
 	int	size;
 
-	ft_p_di(n);
+	if (ft_p_di(n) == -1)
+		return (-1);
 	size = 0;
 	if (n <= 0)
 		size++;
