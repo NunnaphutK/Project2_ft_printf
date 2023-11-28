@@ -17,7 +17,8 @@ static int	ft_p_u(unsigned int n)
 	char	x;
 
 	if (n > 9)
-		ft_p_u(n / 10);
+		if (ft_p_u(n / 10) == -1)
+			return (-1);
 	n = n % 10;
 	x = n + '0';
 	if (write(1, &x, 1) == -1)

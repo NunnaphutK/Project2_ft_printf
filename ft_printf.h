@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdarg.h>
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-
-/*####################if def##########################*/
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
 
 int	ft_printf_c(char c);
 int	ft_printf_s(char *str);
@@ -25,3 +25,5 @@ int	ft_printf_u(unsigned int n);
 int	ft_printf_x(unsigned int n);
 int	ft_printf_bx(unsigned int n);
 int	ft_printf(const char *str, ...);
+
+#endif

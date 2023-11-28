@@ -18,7 +18,8 @@ static int	ft_p_x(unsigned int n)
 
 	base = "0123456789abcdef";
 	if (n > 15)
-		ft_p_x(n / 16);
+		if (ft_p_x(n / 16) == -1)
+			return (-1);
 	n = n % 16;
 	if (write(1, &base[n], 1) == -1)
 		return (-1);
